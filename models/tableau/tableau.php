@@ -10,7 +10,7 @@ class tableau
                     select count(*) from emprunt where emprunt.id_livre = livre.id and date_retour is null
                     ) AS emprunt
                     FROM abonne.livre
-                    inner join auteur on livre.auteur_id = auteur.id
+                    inner join auteur on livre.auteur_id = auteur.id    
                     inner join editeur on livre.editeur_id = editeur.id
                     inner join emprunt  on livre.id  = emprunt.id_livre
                  ";

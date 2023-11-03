@@ -2,6 +2,7 @@
 require_once 'connection/connection.php';
 require_once 'function/show_table.php';
 require 'models/tableau/tableau.php';
+require_once 'vue/navbar.html';
 
 session_start();
 
