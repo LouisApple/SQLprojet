@@ -6,7 +6,7 @@ class show_table
     public static function generateTable($data, $nbRes = 0)
     {
         ?>
-        <table style="border-collapse: collapse">
+        <table style="border-collapse: collapse; margin:auto; margin-bottom: 2%">
             <thead>
             <tr>
                 <th>Titre</th>
@@ -51,7 +51,7 @@ class show_table
 
         $nbPages = $nbRes / 20;
         for ($i = 1; $i < $nbPages + 1; $i++) {
-            echo '<a style="margin-right:6px" href="index.php?page=' . $i . '"><button style=" margin-top:5px">' . $i . '</button></a>';
+            echo '<a style="margin-right:6px" href="index.php?page=' . $i . '"><button type="button" style=" margin-top:5px">' . $i . '</button></a>';
         }
     }
 
