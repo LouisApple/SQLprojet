@@ -1,3 +1,5 @@
+**La base de donnée est trouvable à la racine du repo Git.**
+
 **Script pour créer la table utilisateurs :**
 
 CREATE TABLE abonne.utilisateurs (
