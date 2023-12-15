@@ -8,7 +8,7 @@ $where = abonne_functions::createWhere();
 include_once 'connection/connection.php';
 include_once 'models/tableau/abonne.php';
 //Affichage des champs de recherche et de la navbar
-require_once 'vue/navbar.html';
+require_once 'vue/navbar.php';
 include_once 'vue/recherche_abonne.php';
 
 //Calcul le offset en fonction de la page
