@@ -1,4 +1,4 @@
-Script pour créer la table utilisateurs :
+**Script pour créer la table utilisateurs :**
 
 CREATE TABLE abonne.utilisateurs (
 	id int auto_increment PRIMARY KEY NOT NULL,
@@ -13,7 +13,7 @@ COLLATE=utf8mb4_general_ci;
 DROP TABLE IF EXISTS abonne.utilisateurs;
 
 
-Script pour génerer les utilisateurs avec les abonnés :
+**Script pour génerer les utilisateurs avec les abonnés :**
 
 INSERT INTO utilisateurs (id_abonne, isGestionnaire, email, password)
 SELECT
