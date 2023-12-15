@@ -31,5 +31,7 @@ Abonné :
 Mail : JoséphineBernier@gmail.com
 Mot de passe : password
 
-Gestionnaire : admin@admin.com
+Gestionnaire :
+
+Mail : admin@admin.com
 Mot de passe : password
