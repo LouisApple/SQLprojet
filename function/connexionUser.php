@@ -14,6 +14,5 @@ class connexionUser
             $_SESSION['id'] = $user[0];
             $_SESSION['id_abonne'] = $user['id_abonne'];
         }
-        var_dump($_SESSION);
     }
 }

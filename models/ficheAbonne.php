@@ -2,7 +2,7 @@
 
 class ficheAbonne
 {
-    public static function getAbonneData(int $id)
+    public static function getAbonneDataAdmin(int $id)
     {
         $db = connection::getSqlConnection();
 
@@ -11,10 +11,17 @@ class ficheAbonne
         return $db->execute_query($query)->fetch_array();
     }
 
-    public static function modifierFiche()
+    public static function getAbonneDataAbonne(int $id)
     {
-        var_dump($_POST);
+        $db = connection::getSqlConnection();
 
+        $query = "SELECT abonne.date_naissance, abonne.adresse, abonne.ville, abonne.code_postal from abonne where abonne.id = $id";
+
+        return $db->execute_query($query)->fetch_array();
+    }
+
+    public static function modifierFicheAdmin()
+    {
         $prenom = $_POST['prenom'];
         $nom = $_POST['nom'];
         $date_naissance = $_POST['date_naissance'];
@@ -29,6 +36,21 @@ class ficheAbonne
         $db = connection::getSqlConnection();
 
         $query = "UPDATE abonne SET nom = '$nom',prenom = '$prenom',date_naissance = '$date_naissance',adresse = '$adresse',code_postal = '$code_postal',ville = '$ville',date_inscription = '$date_inscription',date_fin_abo = '$date_fin_abo' WHERE abonne.id = $id";
+
+        return $db->execute_query($query);
+    }
+
+    public static function modifierFicheAbonne()
+    {
+        $date_naissance = $_POST['date_naissance'];
+        $adresse = $_POST['adresse'];
+        $code_postal = $_POST['code_postal'];
+        $id = $_SESSION['id'];
+        $ville = $_POST['ville'];
+
+        $db = connection::getSqlConnection();
+
+        $query = "UPDATE abonne SET date_naissance = '$date_naissance',adresse = '$adresse',code_postal = '$code_postal',ville = '$ville' WHERE abonne.id = $id";
 
         return $db->execute_query($query);
     }

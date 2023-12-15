@@ -19,5 +19,3 @@ $result = tableau::getRequest($where, true, $offset);
 $nbRes = tableau::getRequest($where)->num_rows;
 //Genere l'affichage du tableau
 show_table::generateTable($result, $nbRes);
-
-var_dump($_SESSION);
