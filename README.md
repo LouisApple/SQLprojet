@@ -1,5 +1,9 @@
 **La base de donnée est trouvable à la racine du repo Git.**
 
+**Configuration de la BDD**
+
+Pour configurer sa BDD, il faut aller dans connection/connection.php au sein de la fonction getSqlConnection().
+
 **Script pour créer la table utilisateurs :**
 
 CREATE TABLE abonne.utilisateurs (
